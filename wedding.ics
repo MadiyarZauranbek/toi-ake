@@ -5,11 +5,11 @@ CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:20261129T120000Z-wedding@madiyar-aisha
 DTSTAMP:20260917T180000Z
-DTSTART:20261129T120000Z
+DTSTART:20261129T110000Z
 DTEND:20261129T190000Z
 SUMMARY:Свадьба Мадияра и Айши · Мадияр мен Айшаның үйлену тойы
 LOCATION:Romance Palace\, ул. Райымбек батыра 147\, посёлок Бесагаш\, Алматинская область
-DESCRIPTION:Сбор гостей с 17:00. 2GIS: https://2gis.kz/almaty/firm/9429940000839272
+DESCRIPTION:Сбор гостей с 16:00. 2GIS: https://2gis.kz/almaty/firm/9429940000839272
 GEO:43.294526;77.027645
 BEGIN:VALARM
 TRIGGER:-P1D
