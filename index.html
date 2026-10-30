@@ -210,7 +210,7 @@
   .nm{display:block;margin:2px -16px 0;padding:.04em .1em .12em;font-size:56px;font-size:clamp(52px,17.2vw,80px);line-height:1.15;letter-spacing:-.01em;white-space:nowrap}
   .amid{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;margin:4px 0 0}
   .amid .mark{margin:0}
-  .inv-2{font-style:italic;font-size:21px;line-height:1.3;margin-top:2px}
+  .inv-2{font-style:normal;font-size:21px;line-height:1.3;margin-top:2px}
   .inv-3{margin-top:10px;font-size:21px;line-height:1.5}
   .hosts{margin-top:14px}
   .hosts .orn{margin:26px auto 18px}
@@ -442,12 +442,12 @@
   /* v8: блок имён v7.5 (Passions Conflict) заменён — см. ниже «вариант отца». */
   /* v8 (вариант отца, 28–29.10): имена пары — классический английский копперплейт Toi Script (вшит, см. ниже);
      заглавная «А» в «Айша» — из Miama Nueva через ::first-letter (у Great Vibes/Toi Script А похожа на строчную). */
-  .nm,.cv-name,.cv-amp{font-family:'Toi Script','Cormorant Garamond',Georgia,serif;font-style:normal;font-weight:400;letter-spacing:0;-webkit-text-stroke:.5px transparent}
+  .nm,.cv-name,.cv-amp{font-family:'Toi Script','Cormorant Garamond',Georgia,serif;font-style:normal;font-weight:400;letter-spacing:0}
   .nm{font-size:74px;font-size:clamp(68px,22vw,104px);line-height:1.02;padding:.08em .14em .16em}
   /* v8 (29.10, правка 6): имена пары — как остальные заголовки на светлых листах (Құрметті, Той салтанаты, Romance Palace):
      бордо вместо золотой фольги. Золотом на светлом они были единственными и читались как другой, «тонкий» шрифт.
      Золото остаётся на тёмных лентах (Тойға дейін, Тойымыздың…, Асхат & Гульнара) и в эмблемах колец. */
-  .nm{color:#57121F}
+  /* правка 7 (30.10): имена снова золотые (просьба заказчика) */
   .nm[data-cfg="bride"]::first-letter{font-family:'Miama Toi Initial','Toi Script','Cormorant Garamond',Georgia,serif;font-style:normal;font-weight:400;font-size:.89em;line-height:.8;letter-spacing:0;margin-right:.12em}
   /* v8 (вариант отца, 29.10, правка 4): все заголовки и имена пары — Toi Script: производный от Great Vibes
      (OFL 1.1; RFN «Great Vibes» в именах не используется; сборка, OFL.txt и README — fontlab/ext/toi-script/)
@@ -552,10 +552,10 @@
     <p class="greet-2 h-in d2" data-i18n="greet_2">ағайын-туыс, құда-жекжат, достар, көршілер!</p>
     <svg class="orn orn-s h-in d3" viewBox="-40 -40 80 80" aria-hidden="true" focusable="false"><use href="#rosM" xlink:href="#rosM"/></svg>
     <p class="inv h-in d3" data-i18n="inv_1">Сіздерді ұлымыз</p>
-    <p class="nm disp h-in d4" data-cfg="groomGen">Мадияр</p>
+    <p class="nm disp foil foil--live h-in d4" data-cfg="groomGen">Мадияр</p>
     <div class="amid h-in d4" aria-hidden="true"><svg class="mark" viewBox="0 0 48 30" focusable="false"><use href="#rm" xlink:href="#rm"/></svg></div>
     <p class="inv-2 h-in d4" data-i18n="inv_2">мен келініміз</p>
-    <p class="nm disp h-in d5" data-cfg="bride">Айша</p>
+    <p class="nm disp foil foil--live h-in d5" data-cfg="bride">Айша</p>
     <p class="inv-3 h-in d5" data-i18n="inv_3">екеуінің үйлену тойына арналған салтанатты ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!</p>
   </section>
 
