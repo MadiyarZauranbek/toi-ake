@@ -478,11 +478,22 @@
   #cdToday{font-size:36px;line-height:1.3}
   .band .ttl{padding-top:.08em}
   /* v8 (правка 6): отсчёт — последняя лента: без нижнего фестона, прижата к низу страницы; кредит Telegram внутри неё, в самом низу */
-  .band--last{margin-bottom:0;padding-bottom:96px}
-  .band--last .edge-b{display:none}
-  .band--last .credit{margin-top:44px}
+  /* v8 (правка 8, 30.10.2026): отец — «красный в конце некрасив на фоне светлого сайта, убрать бордовую зону совсем».
+     Финал и отсчёт — обычные светлые листы (.sheet), как остальные: заголовки бордо, имена той иелері золотом
+     (как имена пары), арка — тёплый лист с золотым кантом, кредит — бордовая подпись с светлой пилюлей.
+     Бордовых лент (.band/.fin) в разметке больше нет; их CSS оставлен на случай возврата. */
+  .sheet--thanks .fin-rings{width:92px;height:58px;margin:0 auto 6px}
+  .sheet--thanks .fin-1{color:#57121F;margin-top:0}
+  .sheet--thanks .orn{margin:18px auto 14px}
+  .sheet--thanks .hosts{margin-top:0}
+  .sheet--thanks .hosts-n{margin-top:4px}
+  .sheet--cd .arch{margin-top:30px}
+  .sheet--cd .arch-in{background:#FBF2E1;background-image:radial-gradient(ellipse at 50% 34%,rgba(255,255,255,.95) 0,rgba(255,255,255,0) 62%),linear-gradient(180deg,#FDF7EA 0%,#F3E4C8 100%);box-shadow:inset 0 0 0 1px rgba(176,124,31,.42),0 18px 30px -18px rgba(87,18,31,.35)}
+  .sheet--cd .cd-after,.sheet--cd .credit{color:#57121F}
+  .sheet--cd .credit{margin-top:40px}
+  .sheet--cd .credit-h{background:rgba(87,18,31,.08);color:#57121F}
+  .sheet--cd .credit:active .credit-h{background:rgba(87,18,31,.16)}
   #countdown[hidden]~.credit{margin-top:30px}
-  .fin{padding-bottom:84px}
   /* без обложки первый экран появляется сразу после загрузки — задержки появления короче */
   body.entered .d1{animation-delay:.2s}body.entered .d2{animation-delay:.35s}body.entered .d3{animation-delay:.5s}
   body.entered .d4{animation-delay:.7s}body.entered .d5{animation-delay:.9s}body.entered .d6{animation-delay:1.1s}
@@ -630,25 +641,21 @@
     <!-- блока контактов в разметке нет (решение семьи: номера не показывать); если его вернут — взять из versions/v6-bordo.html и поставить CONFIG.showContacts=true -->
   </section>
 
-  <!-- ФИНАЛ -->
-  <section class="fin reveal">
-    <span class="edge edge-t" aria-hidden="true"></span>
-    <span class="edge edge-b" aria-hidden="true"></span><!-- правка 6: финал больше не последний — снизу тоже фестон, а не прямой срез -->
-    <div class="sheet-top" aria-hidden="true"><svg class="seal" viewBox="0 0 64 64" focusable="false"><use href="#sealO" xlink:href="#sealO"/></svg></div>
-    <svg class="fin-rings" viewBox="0 0 152 112" aria-hidden="true" focusable="false"><use href="#rfL" xlink:href="#rfL"/></svg>
-    <p class="fin-1 fin-1--long disp foil-lt foil--live" data-i18n="final_2">Тойымыздың қадірлі қонағы болыңыздар!</p>
+  <!-- ФИНАЛ (правка 8, 30.10: отец попросил убрать бордовую зону в конце — обычный светлый лист) -->
+  <section class="sheet sheet--thanks reveal">
+    <div class="sheet-top" aria-hidden="true"><svg class="seal" viewBox="0 0 64 64" focusable="false"><use href="#seal" xlink:href="#seal"/></svg></div>
+    <svg class="fin-rings" viewBox="0 0 48 30" aria-hidden="true" focusable="false"><use href="#rm" xlink:href="#rm"/></svg>
+    <p class="fin-1 fin-1--long disp" data-i18n="final_2">Тойымыздың қадірлі қонағы болыңыздар!</p>
     <svg class="orn" viewBox="-40 -40 80 80" aria-hidden="true" focusable="false"><use href="#rosM" xlink:href="#rosM"/></svg>
-    <div class="hosts hosts--fin">
+    <div class="hosts">
       <p class="kick" data-i18n="hosts_lbl">Той иелері</p>
-      <p class="hosts-n disp foil-lt" data-cfg="hosts">Асхат &amp; Гульнара</p>
+      <p class="hosts-n disp foil foil--live" data-cfg="hosts">Асхат &amp; Гульнара</p>
     </div>
   </section>
 
-  <!-- ОТСЧЁТ (вариант отца, правка 6: в самом низу, после той иелері) + подпись жениха в самом конце -->
-  <section class="sheet band band--last reveal">
-    <span class="edge edge-t" aria-hidden="true"></span>
-    <span class="edge edge-b" aria-hidden="true"></span>
-    <div class="sheet-top" aria-hidden="true"><svg class="seal" viewBox="0 0 64 64" focusable="false"><use href="#sealL" xlink:href="#sealL"/></svg></div>
+  <!-- ОТСЧЁТ (правка 8: светлый лист в самом низу, после той иелері) + подпись жениха в самом конце -->
+  <section class="sheet sheet--cd reveal">
+    <div class="sheet-top" aria-hidden="true"><svg class="seal" viewBox="0 0 64 64" focusable="false"><use href="#seal" xlink:href="#seal"/></svg></div>
     <h2 class="ttl" data-i18n="cd_title">Тойға дейін</h2>
     <div class="arch">
       <div class="arch-in">
